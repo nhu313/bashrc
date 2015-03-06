@@ -10,7 +10,7 @@ function when_ok() {
 
 # x, ×, X, ✕, ☓, ✖, ✗, ✘,
 # SAD_FACE="✖"
-SAD_FACE="O_o"
+SAD_FACE=">_<"
 function when_failed() {
   ret_val=$?
   if [[ "$ret_val" != "0" ]]; then
@@ -37,4 +37,4 @@ hg_all() {
 }
 alias vcbranch="vcprompt -f ' %b'"
 alias vcinfo="vcprompt -f '%m%u%a'"
-PS1="\[$DARK_GRAY\](\h) \$(when_ok '\[$LIGHT_GREEN\]')\$(when_failed '\[$LIGHT_RED\]') \[$WHITE\][\[$CYAN\]\W\[$YELLOW\]\$(vcbranch)\[$LIGHT_RED\]\$(vcinfo)\$(hg_all)\[$WHITE\]] $ \[$RESET\]"
+PS1="\$(when_ok '\[$GREEN\]')\$(when_failed '\[$RED\]') \[$WHITE\][\[$CYAN\]\W\[$YELLOW\]\$(vcbranch)\[$LIGHT_RED\]\$(vcinfo)\$(hg_all)\[$WHITE\]] $ \[$RESET\]"
