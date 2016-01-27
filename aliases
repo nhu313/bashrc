@@ -27,3 +27,6 @@ alias gib="gem install bundler --no-ri --no-rdoc"
 alias redcar=wrapped_redcar
 alias crs="clear; be rspec -c"
 alias crb="clear; ruby"
+
+alias tax.run='mix phoenix.server'
+alias tax.iex='iex -S mix'
